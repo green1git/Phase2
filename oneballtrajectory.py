@@ -49,6 +49,9 @@ x_solution, y_solution, Vx_solution, Vy_solution, omega_solution = (
     solution[:, 4],
 )
 
+# Keep results above 0 reference point
+x_solution, y_solution = x_solution[y_solution>=0], y_solution[y_solution>=0]
+
 # Plot the trajectory
 plt.figure(figsize=(8, 6))
 plt.plot(x_solution, y_solution, label='Trajectory')
