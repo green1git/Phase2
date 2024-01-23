@@ -1,5 +1,5 @@
 % Load all the 15 setting  data
-data = readtable('all_tests.csv');
+data = readtable('../all_tests.csv');
 
 R = data.ReynoldsNumber; % Reynolds number column
 alpha = data.SpinRatio; % Spin Ratio column
