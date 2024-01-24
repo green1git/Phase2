@@ -20,9 +20,14 @@ Omega = 2e-5
 vis = 0.0000153754 # kinematic viscosity of air
 
 # initial conditions
-spin_rate = 42*2*np.pi
-v0 = 254*0.3048
-launch_angle = 10*np.pi/180 # radians
+spinrps = 37
+spin_rate = spinrps*2*np.pi # convert to rad/s
+
+v0ft = 254
+v0 = v0ft*0.3048 # convert to m/s
+
+launchdeg = 10
+launch_angle = launchdeg*np.pi/180 # convert to radians
 
 
 spin_ratio = spin_rate*r/v0
