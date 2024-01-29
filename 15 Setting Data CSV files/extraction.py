@@ -19,6 +19,7 @@ for filename in os.listdir(folder_path):
             file_path = os.path.join(folder_path, filename)
     
             # Read the CSV file
+            print(file_path)
             df = pd.read_csv(file_path, header=None) #No header 
     
             # Extract the last four columns
