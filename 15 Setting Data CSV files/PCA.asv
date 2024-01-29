@@ -54,14 +54,12 @@ idx = idx(1:(15*14)/2); % Keep elements not NaN. I.e. keep elements in the trian
 
 %% Create a matrix where each successive shortest distance is considered with each row
 % Vals keeps a cumalitive score with each row, denoting the points which
-% are close to others. With each row, an additional distance is considered.
+% are close to others. With each row, an additional distance is cond
 
 % With each row in vals, the two points with the next shortest distance is
 % considered
 vals = zeros((15*14)/2, 15);
 
-% We want to keep track of the max cumulative score in each row. Will be
-% valid from second row upward.
 ypoints = zeros(1, (15*14)/2);
 
 for i=1:(15*14)/2
@@ -80,7 +78,7 @@ for i=1:(15*14)/2
         end
     end
 
-    ypoints(i) = idx;
+    ypoints(i) = j;
 
 end
 
@@ -94,11 +92,6 @@ end
 %xticks(xlimits(1):0.25:xlimits(2));
 %}
 
-%% Plot
 
 figure;
 plot(1:(15*14)/2, ypoints);
-xlabel("Number of shorstest pairings considered, in ascending order");
-ylabel("The point in PCA space closest to all other points");
-
-
