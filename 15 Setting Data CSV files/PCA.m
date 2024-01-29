@@ -97,7 +97,7 @@ end
 %% Plot
 
 figure;
-plot(1:(15*14)/2, ypoints);
+plot(2:(15*14)/2, ypoints(2:end)); %First pair not valid, due to two ones. Therefore plotted from 2 shortest distances considered and onwards
 xlabel("Number of shorstest pairings considered, in ascending order");
 ylabel("The point in PCA space closest to all other points");
 
