@@ -2,6 +2,9 @@
 % Read output.csv 
 M = readmatrix("output.csv");
 
+M = M'
+
+
 %%
 % Label the 15 test conditions
 label = 1:15;
@@ -13,7 +16,8 @@ label = 1:15;
 % varience
 figure;
 Y = Y(:, 1:2); % Keep two principle components with the highest varience
-scatter(Y(:, 1), Y(:, 2), 45, label, "filled");
+%scatter(Y(:, 1), Y(:, 2), 45, label, "filled");
+scatter(Y(:, 1), Y(:, 2), 45);
 %axis equal;
 colorbar;
 colormap turbo;
@@ -104,7 +108,7 @@ xlabel("Number of shorstest pairings considered, in ascending order");
 ylabel("The point in PCA space closest to all other points");
 
 
-%% Removal of the first three points from PCA plot
+%%
 
 Y(4, :) = [];
 label(4) = [];
