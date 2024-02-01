@@ -30,11 +30,11 @@ xgb.fit(M, y)
 # Number of features to select
 n_features = 10  # Change this to your desired number of features
 
-# Get feature importances and sort them
+# Get feature importances and sort them. Sorted in ascending order of importance
 importances = xgb.feature_importances_
-indices = np.argsort(importances)[::-1]
+indices = np.argsort(importances) + 1 # Index at 0, so add 1
 
-# Select the top 'n' features
+# Select the 'n' features to remove
 selected_indices = indices[:n_features]
 
 print(selected_indices)

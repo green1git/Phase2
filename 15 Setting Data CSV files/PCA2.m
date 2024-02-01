@@ -1,6 +1,6 @@
 % Read output.csv 
-M = readmatrix("../27 Setting Data/output.csv"); % 27 setting data
-%M= readmatrix("output.csv"); % 15 setting data
+%M = readmatrix("../27 Setting Data/output.csv"); % 27 setting data
+M= readmatrix("output.csv"); % 15 setting data
 
 % Take transpose, so that each of the 15 test conditions are the features
 M = M';
