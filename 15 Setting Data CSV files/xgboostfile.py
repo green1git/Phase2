@@ -12,6 +12,7 @@ from xgboost import XGBClassifier
 #from sklearn.feature_selection import SelectFromModel
 
 file_path = "../27 Setting Data/output.csv"
+#file_path = "output.csv"
 
 df = pd.read_csv(file_path, header=None)
 

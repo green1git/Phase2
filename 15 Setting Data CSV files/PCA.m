@@ -14,7 +14,7 @@ label = 1:15;
 figure;
 Y = Y(:, 1:2); % Keep two principle components with the highest varience
 scatter(Y(:, 1), Y(:, 2), 45, label, "filled");
-%axis equal;
+axis equal;
 colorbar;
 colormap turbo;
 
